@@ -15,6 +15,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
+    TD.event.post('user', {:name => @user.name, :email => @user.email, :age => @user.age})
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }

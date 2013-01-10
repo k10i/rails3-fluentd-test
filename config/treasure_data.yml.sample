@@ -1,0 +1,13 @@
+development:
+  agent: localhost:24224
+  tag: fluentd_rails_test
+  debug_mode: true
+
+production:
+  apikey: "YOUR_API_KEY"
+  database: rails_production
+  debug_mode: false
+
+# disable logging
+
+test:
